@@ -16,6 +16,8 @@ def file_name(file_dir):
     for root, dir, files in os.walk(file_dir):
         # print('root_dir:', root)  # 当前目录路径
         # print('sub_dirs:', dirs)  # 当前路径下所有子目录
+        # 目录后面加/
+        dir = [x+'/' for x in dir]
         dirs += dir
         # print('files:', files)  # 当前路径下所有非目录子文件
         dirs += files
